@@ -1,0 +1,24 @@
+{
+  "name": "docker-mysql-master-slave",
+  "version": "1.0.0",
+  "description": "Docker MySQL master-slave replication  ========================",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabernardo/docker-mysql-master-slave.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jabernardo/docker-mysql-master-slave/issues"
+  },
+  "homepage": "https://github.com/jabernardo/docker-mysql-master-slave#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
