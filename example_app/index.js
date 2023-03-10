@@ -19,8 +19,10 @@ const slaveConnection = mysql.createConnection({
 
 (async () => {
   const masterQuery = util.promisify(masterConnection.query).bind(masterConnection);
-  const masterResults = await masterQuery("INSERT INTO code VALUES (?)", [1002]);
+  const masterResults = await masterQuery("INSERT INTO code VALUES (?)", [3000]);
   console.log(masterResults);
+  const masterCommit = util.promisify(masterConnection.commit).bind(masterConnection);
+  await masterCommit();
   masterConnection.end();
 
   const slaveQuery = util.promisify(slaveConnection.query).bind(slaveConnection);
