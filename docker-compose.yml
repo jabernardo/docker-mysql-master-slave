@@ -32,6 +32,17 @@ services:
     networks:
       - overlay
 
+  payroll:
+    build: ./payroll
+    expose:
+     - 80
+    ports:
+     - 80:80
+    volumes:
+     - ./payroll/htdocs:/var/www/html
+    networks:
+      - overlay
+
 networks:
   overlay:
 
